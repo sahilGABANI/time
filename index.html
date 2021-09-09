@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <pre style="word-wrap: break-word; white-space: pre-wrap;">#include&lt;iostream&gt;
+        using namespace std;
+        class Time 
+        {
+            private :
+                int s,H,M;
+            public :
+                 void getData()
+                {
+                     cout&lt;&lt;"enter second 1 :";
+                     cin&gt;&gt;s;
+                }
+                Time sum(Time T)
+                {
+                    Time D;
+                    D.s=s+T.s;
+                    return D;
+                }
+                void printData()
+                {
+                     H=s/3600;
+                    s=s%3600;
+                    M=s/60;
+                    s=s%60;
+                    cout&lt;&lt;H&lt;&lt;" : "&lt;&lt;M&lt;&lt;" : "&lt;&lt;s;
+                }
+        };
+        int main()
+        {
+            Time a1,a2,a3;
+            
+            a1.getData();
+            a2.getData();
+            a3 =a1.sum(a2);
+            a3.printData();
+            
+        }
+        </pre>
+</body>
+</html>
